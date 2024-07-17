@@ -1,6 +1,8 @@
 import 'package:bmi_calculator/helpers/app_colors.dart';
+import 'package:bmi_calculator/reusable_widgets/icon_content.dart';
 import 'package:flutter/material.dart';
-import 'reusable_widgets/resuable_card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../reusable_widgets/resuable_card.dart';
 
 const bottomContainerHeight = 80.0;
 AppColors appColors = AppColors();
@@ -27,11 +29,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ResuableCard(
                     colour: appColors.cardBgColor(),
+                    cardChild: const IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
+                    ),
                   )
                 ),
                 Expanded(
                   child: ResuableCard(
                     colour: appColors.cardBgColor(),
+                    cardChild: const IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
+                    ),
                   )
                 ),
               ],

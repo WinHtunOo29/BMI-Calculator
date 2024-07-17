@@ -8,4 +8,8 @@ class AppColors {
   Color bottomContainerBgColor() {
     return const Color(0xFFEB1555);
   }
+
+  Color textColor() {
+    return const Color(0xFF8D8E98);
+  }
 }
