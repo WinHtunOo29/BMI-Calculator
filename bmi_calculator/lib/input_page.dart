@@ -1,5 +1,9 @@
+import 'package:bmi_calculator/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'reusable_widgets/resuable_card.dart';
+
+const bottomContainerHeight = 80.0;
+AppColors appColors = AppColors();
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -22,12 +26,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ResuableCard(
-                    colour: const Color(0xFF1D1E33),
+                    colour: appColors.cardBgColor(),
                   )
                 ),
                 Expanded(
                   child: ResuableCard(
-                    colour: const Color(0xFF1D1E33),
+                    colour: appColors.cardBgColor(),
                   )
                 ),
               ],
@@ -35,7 +39,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ResuableCard(
-              colour: const Color(0xFF1D1E33),
+              colour: appColors.cardBgColor(),
             )
           ),
           Expanded(
@@ -43,17 +47,23 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ResuableCard(
-                    colour: const Color(0xFF1D1E33),
+                    colour: appColors.cardBgColor(),
                   )
                 ),
                 Expanded(
                   child: ResuableCard(
-                    colour: const Color(0xFF1D1E33),
+                    colour: appColors.cardBgColor(),
                   )
                 ),
               ],
             ),
           ),
+          Container(
+            color: appColors.bottomContainerBgColor(),
+            margin: const EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: bottomContainerHeight,
+          )
         ],
       )
     );
