@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  Color cardBgColor() {
+  Color activeCardBgColor() {
     return const Color(0xFF1D1E33);
+  }
+
+  Color inactiveCardBgColor() {
+    return const Color(0xFF111328);
   }
 
   Color bottomContainerBgColor() {
