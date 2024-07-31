@@ -7,7 +7,11 @@ import 'package:bmi_calculator/helpers/app_colors.dart';
 AppColors appColors = AppColors();
 
 class ResultsPage extends StatelessWidget {
-  const ResultsPage({super.key});
+  const ResultsPage({super.key, required this.bmiResult, required this.resultText, required this.interpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -33,24 +37,24 @@ class ResultsPage extends StatelessWidget {
             flex: 5,
             child: ResuableCard(
               colour: appColors.activeCardBgColor(),
-              cardChild: const Column(
+              cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Normal',
-                    style: TextStyle(
+                    resultText.toUpperCase(),
+                    style: const TextStyle(
                       color: Color(0xFF24D876),
                       fontSize: 22,
                       fontWeight: FontWeight.bold
                     ),
                   ),
                   Text(
-                    '18.3',
+                    bmiResult,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    'Your BMI is quite low, you should eat more!',
+                    interpretation,
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),
